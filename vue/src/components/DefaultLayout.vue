@@ -143,10 +143,13 @@
     const router = useRouter();
 
     function logout() {
-      store.commit('logout');
+      store.dispatch('logout')
+      .then(() => {
         router.push({
           name: "Login",
         });
+      });
+        
       };
     
 

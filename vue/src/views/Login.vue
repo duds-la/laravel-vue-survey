@@ -76,7 +76,7 @@ function login(ev) {
       });
     })
     .catch(err=>{
-      errorMsg.value = err.response.data.errors.email
+      errorMsg.value = err.response.data.errors
     })
 }
 </script>
