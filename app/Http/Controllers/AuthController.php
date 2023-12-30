@@ -68,12 +68,17 @@ class AuthController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function logout()
     {
-        //
+        /** @var User $user */
+        $user = Auth::user();
+
+        $user->currentAccessToken()->delete();
+
+        return response([
+            'success' => true
+        ])
+
     }
 
     /**
