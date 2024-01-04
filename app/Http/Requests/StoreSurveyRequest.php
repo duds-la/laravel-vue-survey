@@ -18,7 +18,7 @@ class StoreSurveyRequest extends FormRequest
     {
         $this->merge([
             'user_id' => $this->user()->id
-        ])
+        ]);
     }
 
     /**
