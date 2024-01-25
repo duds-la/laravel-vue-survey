@@ -8,7 +8,7 @@
   
           <div class="flex">
             <TButton v-if="model.slug" link :href="`/view/survey/${model.slug}`" target="_blank" class="mr-2">
-              <ExternalLinkIcon class="w-5 h-5" />
+              <TrashIcon class="w-5 h-5" />
               View Public link
             </TButton>
             <TButton v-if="route.params.id" color="red" @click="deleteSurvey()">
@@ -182,7 +182,7 @@
   
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <TButton>
-              <SaveIcon class="w-5 h-5 mr-2" />
+              <TrashIcon class="w-5 h-5 mr-2" />
               Save
             </TButton>
           </div>
@@ -195,7 +195,7 @@
   import { v4 as uuidv4 } from "uuid";
   import { computed, ref, watch } from "vue";
   import { useRoute, useRouter } from "vue-router";
-  import { SaveIcon, TrashIcon, ExternalLinkIcon } from '@heroicons/vue/solid'
+  import { TrashIcon } from '@heroicons/vue/16/solid'
   import store from "../store";
   import PageComponent from "../components/PageComponent.vue";
   import QuestionEditor from "../components/editor/QuestionEditor.vue";

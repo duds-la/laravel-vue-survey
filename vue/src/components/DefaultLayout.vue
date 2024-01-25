@@ -9,7 +9,7 @@
     ```
   -->
   <div class="min-h-full">
-    <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
+    
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -101,15 +101,7 @@
               </Menu>
             </div>
           </div>
-          <div class="-mr-2 flex md:hidden">
-            <!-- Mobile menu button -->
-            <DisclosureButton
-              class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-            >
-              <span class="sr-only">Open main menu</span>
-              <MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-              <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
-            </DisclosureButton>
+          
           </div>
         </div>
       </div>
@@ -167,12 +159,12 @@
           </div>
         </div>
       </DisclosurePanel>
-    </Disclosure>
+ 
 
     <router-view :key="$route.path"></router-view>
 
     <Notification />
-  </div>
+  
 </template>
 
 <script>
@@ -185,7 +177,6 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/vue";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { useStore } from "vuex";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
@@ -205,9 +196,6 @@ export default {
     MenuButton,
     MenuItem,
     MenuItems,
-    BellIcon,
-    MenuIcon,
-    XIcon,
     Notification,
   },
   setup() {

@@ -20,7 +20,7 @@
         </TButton>
         <div class="flex items-center">
           <TButton :href="`/view/survey/${survey.slug}`" circle link target="_blank">
-            <ExternalLinkIcon class="w-5 h-5" />
+            <TrashIcon class="w-5 h-5" />
           </TButton>
   
           <TButton v-if="survey.id" @click="emit('delete', survey)" circle link color="red">
@@ -33,7 +33,7 @@
   
   <script setup>
   import TButton from "./core/TButton.vue";
-  import { PencilIcon, ExternalLinkIcon, TrashIcon } from '@heroicons/vue/solid'
+  import { PencilIcon, TrashIcon } from '@heroicons/vue/16/solid'
   
   const { survey } = defineProps({
     survey: Object,
